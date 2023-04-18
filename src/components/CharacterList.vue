@@ -2,7 +2,7 @@
     <!-- single card -->
     <section>
         <div class="row">
-            <CharacterCard />
+            <CharacterCard v-for="(character, index) in store.characterList" :key="index" :character="character" />
         </div>
     </section>
 </template>
@@ -21,7 +21,7 @@ export default {
 
     data() {
         return {
-
+            store,
         }
     },
 

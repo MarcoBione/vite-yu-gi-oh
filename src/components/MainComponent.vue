@@ -2,7 +2,7 @@
     <main>
 
         <div class="container">
-
+            <CharacterListVue />
         </div>
 
         <div class="container">
@@ -16,6 +16,8 @@
 import { store } from '../store';
 import axios from 'axios';
 
+import CharacterListVue from './CharacterList.vue';
+
 export default {
 
     data() {
@@ -23,6 +25,9 @@ export default {
             store,
         }
     },
+    components: {
+        CharacterListVue,
+    }
 
 }
 </script>

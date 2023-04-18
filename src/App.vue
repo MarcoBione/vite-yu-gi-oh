@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="_mybgapp">
     <HeaderComponent />
     <MainComponent />
   </div>
@@ -29,8 +29,8 @@ export default {
     getData() {
       const URL = store.URL + store.endpoint;
       axios.get(URL).then((res) => {
-        store.characterList = res.data;
-        console.log(store.characterList.data);
+        store.characterList = res.data.data;
+        console.log(store.characterList);
       });
     }
   },

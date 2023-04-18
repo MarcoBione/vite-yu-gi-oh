@@ -1,8 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 @import "bootstrap/scss/bootstrap";
 
+:root {
+    --russian-violet: #3a015cff;
+    --palatinate: #4f0147ff;
+    --dark-purple: #35012cff;
+    --dark-purple-2: #290025ff;
+    --dark-purple-3: #11001cff;
+}
+
 * {
     font-family: 'Share Tech Mono', monospace;
+}
+
+._mybgapp {
+    background-color: var(--dark-purple-3);
+}
+
+header {
+    background-color: var(--dark-purple-2);
+    color: white;
 }
 
 ._mylogo {
@@ -11,4 +28,12 @@
 
 ._mytitle {
     font-weight: 700;
+}
+
+._myygocard {
+    background-color: var(--dark-purple);
+    height: 100%;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
 }
