@@ -2,11 +2,11 @@
     <main>
 
         <div class="container">
-            <CharacterListVue />
+            <SearchBar />
         </div>
 
         <div class="container">
-
+            <CharacterListVue />
         </div>
 
     </main>
@@ -17,6 +17,7 @@ import { store } from '../store';
 import axios from 'axios';
 
 import CharacterListVue from './CharacterList.vue';
+import SearchBar from './SearchBar.vue';
 
 export default {
 
@@ -27,6 +28,7 @@ export default {
     },
     components: {
         CharacterListVue,
+        SearchBar,
     }
 
 }
