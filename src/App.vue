@@ -27,7 +27,7 @@ export default {
       const URL = store.URL + store.endpoint;
       axios.get(URL).then((res) => {
         store.characterList = res.data;
-        console.log(res.data);
+        console.log(store.characterList.data);
       });
     }
   },
