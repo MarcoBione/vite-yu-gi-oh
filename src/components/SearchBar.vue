@@ -1,13 +1,12 @@
 <template>
     <select class="form-select bg-transparent text-white w-25">
         <option selected value="scegli">Scegli</option>
-        <option v-for="type, index in store.characterList" :value="type.archetype">{{ type.archetype }}</option>
+        <option v-for="archetype in archetypeList" :value="archetype">{{ archetype }}</option>
     </select>
 </template>
 
 <script>
 import { store } from '../store';
-import axios from 'axios';
 
 export default {
     name: 'SearchBar',
@@ -16,6 +15,13 @@ export default {
             store,
         }
     },
+    computed: {
+        archetypeList() {
+            return new Set(this.store.characterList.filter((character) => {
+                return character.archetype !== undefined;
+            }).map((character) => character.archetype));
+        }
+    }
 
 }
 </script>
