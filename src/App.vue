@@ -12,16 +12,19 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 
 export default {
+
   name: 'App',
   components: {
     HeaderComponent,
     MainComponent
   },
+
   data() {
     return {
       store
     }
   },
+
   methods: {
     getData() {
       const URL = store.URL + store.endpoint;
@@ -31,10 +34,12 @@ export default {
       });
     }
   },
+
   mounted() {
     store.endpoint = 'character';
     this.getData();
   }
+
 }
 </script>
 

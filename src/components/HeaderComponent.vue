@@ -12,12 +12,14 @@
 
 <script>
 export default {
+
     name: 'HeaderComponent',
     data() {
         return {
             title: 'Yu-Gi-Oh Api Deck',
         }
-    }
+    },
+
 }
 </script>
 
