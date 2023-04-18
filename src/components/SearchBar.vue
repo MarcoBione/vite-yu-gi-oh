@@ -1,5 +1,5 @@
 <template>
-    <select class="form-select bg-transparent text-white w-25">
+    <select class="form-select bg-transparent text-white w-25" v-model="store.archetype">
         <option selected value="scegli">Scegli</option>
         <option v-for="archetype in archetypeList" :value="archetype">{{ archetype }}</option>
     </select>
